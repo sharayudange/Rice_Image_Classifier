@@ -1,0 +1,28 @@
+BEGIN
+
+IMPORT necessary libraries:
+    - TensorFlow, Keras, Streamlit, NumPy, PIL (Image)
+
+LOAD trained CNN model using keras.models.load_model()
+
+SET Streamlit title and header
+
+IF user uploads an image:
+    - Open image using PIL
+    - Resize image to (28, 28)
+    - Convert to numpy array
+    - Normalize values to [0, 1]
+    - Reshape to (1, 28, 28, 3) for batch prediction
+
+    - Predict using the model
+    - Use argmax to get the predicted class index
+    - Map index to actual rice category name
+
+    - Display:
+        - Uploaded image
+        - Predicted label and probability for each class
+
+ELSE:
+    - Prompt user to upload an image
+
+END
